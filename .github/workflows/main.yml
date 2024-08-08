@@ -36,12 +36,6 @@ jobs:
           mkdir -p ./bin
           go build -o ./bin ./...
 
-      - name: Archive build output
-        uses: actions/upload-artifact@v3
-        with:
-          name: built-project
-          path: ./bin/cmd
-
   tests:
     name: Tests
     runs-on: ubuntu-latest
